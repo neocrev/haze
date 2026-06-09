@@ -8,6 +8,16 @@ npx haze
 npm install -g haze && haze
 ```
 
+## Usage
+
+```bash
+npx haze
+# or
+npm install -g haze && haze
+```
+
+That's it. No flags, no config. Just staring at your terminal.
+
 Press any key to exit.
 
 I made this because I needed something pretty to look at while `npm install` runs.
