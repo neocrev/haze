@@ -2,21 +2,15 @@
 
 Terminal particle system. Stars drift. Colours shift. You watch.
 
-```bash
-npx haze
-# or
-npm install -g haze && haze
-```
-
-## Usage
+<p align="center">
+  <img src="demo.svg" alt="haze demo" width="640">
+</p>
 
 ```bash
 npx haze
-# or
-npm install -g haze && haze
 ```
 
-That's it. No flags, no config. Just staring at your terminal.
+No flags, no config. Just staring at your terminal.
 
 Press any key to exit.
 

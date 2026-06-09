@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" rx="8" fill="#0d1117"/>
+  <rect x="0" y="0" width="640" height="28" rx="8" fill="#161b22"/>
+  <rect x="0" y="14" width="640" height="14" fill="#161b22"/>
+  <circle cx="16" cy="14" r="5" fill="#ff5f58"/>
+  <circle cx="32" cy="14" r="5" fill="#ffbd2e"/>
+  <circle cx="48" cy="14" r="5" fill="#18c132"/>
+
+  <!-- Terminal prompt -->
+  <text x="16" y="44" fill="#8b949e" font="13px monospace">$ npx haze</text>
+
+  <!-- Stars (ice blue) -->
+  <g font="monospace">
+    <text x="42" y="86" fill="#b4dcff" font-size="10">·</text>
+    <text x="138" y="72" fill="#8ac4ff" font-size="8">·</text>
+    <text x="201" y="134" fill="#b4dcff" font-size="11">˙</text>
+    <text x="315" y="68" fill="#7bb8ff" font-size="9">·</text>
+    <text x="402" y="156" fill="#b4dcff" font-size="10">·</text>
+    <text x="488" y="92" fill="#a0ccff" font-size="8">·</text>
+    <text x="556" y="148" fill="#b4dcff" font-size="11">˙</text>
+    <text x="82" y="168" fill="#8ac4ff" font-size="9">·</text>
+    <text x="174" y="252" fill="#b4dcff" font-size="10">·</text>
+    <text x="268" y="178" fill="#a0ccff" font-size="8">·</text>
+    <text x="359" y="268" fill="#b4dcff" font-size="11">˙</text>
+    <text x="445" y="232" fill="#7bb8ff" font-size="9">·</text>
+    <text x="534" y="296" fill="#b4dcff" font-size="10">·</text>
+    <text x="598" y="186" fill="#8ac4ff" font-size="8">·</text>
+    <text x="112" y="312" fill="#b4dcff" font-size="10">·</text>
+    <text x="248" y="326" fill="#a0ccff" font-size="9">·</text>
+    <text x="472" y="338" fill="#b4dcff" font-size="10">·</text>
+    <text x="326" y="108" fill="#7bb8ff" font-size="8">·</text>
+    <text x="578" y="110" fill="#a0ccff" font-size="10">·</text>
+    <text x="62" y="134" fill="#b4dcff" font-size="9">·</text>
+    <text x="510" y="180" fill="#8ac4ff" font-size="8">·</text>
+    <text x="372" y="84" fill="#b4dcff" font-size="10">·</text>
+    <text x="224" y="96" fill="#a0ccff" font-size="11">˙</text>
+    <text x="426" y="104" fill="#b4dcff" font-size="8">·</text>
+    <text x="152" y="192" fill="#7bb8ff" font-size="9">·</text>
+  </g>
+
+  <!-- Embers (warm orange) -->
+  <g font="monospace">
+    <text x="54" y="104" fill="#ffc896" font-size="13">°</text>
+    <text x="244" y="144" fill="#ffb870" font-size="14">o</text>
+    <text x="368" y="128" fill="#ffa850" font-size="12">:</text>
+    <text x="498" y="120" fill="#ffc896" font-size="15">O</text>
+    <text x="136" y="228" fill="#ffb870" font-size="13">°</text>
+    <text x="288" y="260" fill="#ffa850" font-size="14">o</text>
+    <text x="416" y="202" fill="#ffc896" font-size="12">:</text>
+    <text x="546" y="260" fill="#ffb870" font-size="13">°</text>
+    <text x="104" y="280" fill="#ffa850" font-size="14">o</text>
+    <text x="202" y="114" fill="#ffc896" font-size="15">O</text>
+    <text x="444" y="276" fill="#ffb870" font-size="12">:</text>
+    <text x="562" y="212" fill="#ffa850" font-size="13">°</text>
+    <text x="318" y="310" fill="#ffc896" font-size="14">o</text>
+    <text x="68" y="228" fill="#ffb870" font-size="12">:</text>
+    <text x="524" y="324" fill="#ffc896" font-size="13">°</text>
+  </g>
+
+  <!-- Stars (lavender) -->
+  <g font="monospace">
+    <text x="94" y="156" fill="#c8b4ff" font-size="10">·</text>
+    <text x="382" y="242" fill="#c8b4ff" font-size="9">·</text>
+    <text x="612" y="272" fill="#b49cff" font-size="10">·</text>
+    <text x="182" y="76" fill="#c8b4ff" font-size="11">˙</text>
+    <text x="466" y="300" fill="#b49cff" font-size="8">·</text>
+    <text x="332" y="228" fill="#c8b4ff" font-size="10">·</text>
+    <text x="128" y="316" fill="#b49cff" font-size="9">·</text>
+    <text x="404" y="324" fill="#c8b4ff" font-size="10">·</text>
+  </g>
+
+  <!-- Stars (pink) -->
+  <g font="monospace">
+    <text x="158" y="134" fill="#ff96c8" font-size="10">·</text>
+    <text x="288" y="86" fill="#ff96c8" font-size="9">·</text>
+    <text x="442" y="144" fill="#ff78b4" font-size="10">·</text>
+    <text x="520" y="156" fill="#ff96c8" font-size="8">·</text>
+    <text x="238" y="196" fill="#ff78b4" font-size="11">˙</text>
+    <text x="566" y="308" fill="#ff96c8" font-size="9">·</text>
+    <text x="74" y="196" fill="#ff78b4" font-size="10">·</text>
+    <text x="352" y="166" fill="#ff96c8" font-size="8">·</text>
+  </g>
+
+  <!-- Stars (mint) -->
+  <g font="monospace">
+    <text x="122" y="108" fill="#96ffc8" font-size="10">·</text>
+    <text x="254" y="168" fill="#96ffc8" font-size="8">·</text>
+    <text x="492" y="108" fill="#78ffb4" font-size="10">·</text>
+    <text x="606" y="208" fill="#96ffc8" font-size="9">·</text>
+    <text x="84" y="260" fill="#78ffb4" font-size="10">·</text>
+    <text x="312" y="148" fill="#96ffc8" font-size="11">˙</text>
+    <text x="426" y="256" fill="#78ffb4" font-size="8">·</text>
+    <text x="538" y="180" fill="#96ffc8" font-size="10">·</text>
+  </g>
+
+  <!-- Stars (gold) -->
+  <g font="monospace">
+    <text x="48" y="288" fill="#ffe696" font-size="10">·</text>
+    <text x="204" y="298" fill="#ffe696" font-size="9">·</text>
+    <text x="374" y="196" fill="#ffdc78" font-size="10">·</text>
+    <text x="498" y="278" fill="#ffe696" font-size="8">·</text>
+    <text x="144" y="174" fill="#ffdc78" font-size="11">˙</text>
+    <text x="458" y="218" fill="#ffe696" font-size="9">·</text>
+    <text x="590" y="318" fill="#ffdc78" font-size="10">·</text>
+    <text x="268" y="220" fill="#ffe696" font-size="8">·</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="320" y="352" fill="#8b949e" font="12px monospace" text-anchor="middle">terminal particle screensaver · press any key to exit</text>
+</svg>
