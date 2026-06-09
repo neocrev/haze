@@ -1,5 +1,5 @@
 {
-  "name": "haze",
+  "name": "@neocrev/haze",
   "version": "1.0.0",
   "description": "Terminal particle system — watch stars drift while you procrastinate",
   "bin": {

@@ -1,7 +1,7 @@
 <p align="center">
   <h1>haze</h1>
   <p>Terminal particle system. Stars drift. Colours shift. You watch.</p>
-  <a href="https://www.npmjs.com/package/haze"><img src="https://img.shields.io/npm/v/haze" alt="npm"></a>
+  <a href="https://www.npmjs.com/package/@neocrev/haze"><img src="https://img.shields.io/npm/v/@neocrev/haze" alt="npm"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
 </p>
 
@@ -10,7 +10,7 @@
 </p>
 
 ```bash
-npx haze
+npx @neocrev/haze
 ```
 
 Press any key to exit.
