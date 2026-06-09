@@ -1,0 +1,107 @@
+#!/usr/bin/env node
+
+const CHAR = {
+  star: ['·', '˙', '⋆', '✧', '+'],
+  ember: ['.', ':', '°', 'o', 'O'],
+  firefly: ['·', '.', '*'],
+  wave: ['~', '≈', '∿'],
+};
+
+const PALETTE = [
+  '\x1b[38;2;180;220;255m', // ice blue
+  '\x1b[38;2;255;200;150m', // warm orange
+  '\x1b[38;2;200;180;255m', // lavender
+  '\x1b[38;2;255;150;200m', // pink
+  '\x1b[38;2;150;255;200m', // mint
+  '\x1b[38;2;255;230;150m', // gold
+];
+
+const RESET = '\x1b[0m';
+const CLEAR = '\x1b[2J';
+const HOME = '\x1b[H';
+const HIDE = '\x1b[?25l';
+const SHOW = '\x1b[?25h';
+
+let W = process.stdout.columns || 80;
+let H = process.stdout.rows || 24;
+let tick = 0;
+let running = true;
+
+function rand(min, max) { return Math.random() * (max - min) + min; }
+
+function Particle(type) {
+  this.x = rand(0, W);
+  this.y = rand(0, H);
+  this.vx = rand(-0.15, 0.15);
+  this.vy = type === 'wave' ? 0 : rand(-0.05, 0.2);
+  this.type = type;
+  this.chars = CHAR[type];
+  this.color = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+  this.size = rand(0.3, 1);
+  this.phase = rand(0, Math.PI * 2);
+  this.flicker = rand(0.5, 1);
+  this.age = 0;
+}
+
+Particle.prototype.update = function () {
+  this.age += 0.01;
+  this.x += this.vx + Math.sin(tick * 0.02 + this.phase) * 0.1;
+  this.y += this.vy;
+
+  if (this.y > H + 1) { this.y = -1; this.x = rand(0, W); }
+  if (this.y < -1) { this.y = H + 1; }
+  if (this.x > W + 1) this.x = -1;
+  if (this.x < -1) this.x = W + 1;
+};
+
+Particle.prototype.draw = function () {
+  const xi = Math.round(this.x);
+  const yi = Math.round(this.y);
+  if (xi < 0 || xi >= W || yi < 0 || yi >= H) return '';
+
+  const bright = Math.max(0.3, Math.sin(tick * 0.03 + this.phase) * 0.5 + 0.5);
+  const intensity = Math.round(bright * (this.chars.length - 1));
+  const ch = this.chars[intensity] || this.chars[0];
+
+  return `\x1b[${yi + 1};${xi + 1}H${this.color}${ch}${RESET}`;
+};
+
+const stars = Array.from({ length: Math.floor((W * H) * 0.08) }, () => new Particle('star'));
+const embers = Array.from({ length: Math.floor((W * H) * 0.02) }, () => new Particle('ember'));
+const particles = [...stars, ...embers];
+
+function resize() {
+  W = process.stdout.columns || 80;
+  H = process.stdout.rows || 24;
+  while (particles.length < (W * H) * 0.1) {
+    particles.push(new Particle(Math.random() > 0.7 ? 'ember' : 'star'));
+  }
+}
+
+function frame() {
+  if (!running) return;
+  tick++;
+  let buf = HOME;
+  for (const p of particles) {
+    p.update();
+    buf += p.draw();
+  }
+  process.stdout.write(buf);
+}
+
+function cleanup() {
+  running = false;
+  process.stdout.write(`${SHOW}${CLEAR}${HOME}`);
+  process.exit(0);
+}
+
+process.stdout.write(`${HIDE}${CLEAR}`);
+process.on('SIGINT', cleanup);
+process.on('SIGTERM', cleanup);
+process.on('SIGWINCH', resize);
+process.stdin.setRawMode && process.stdin.setRawMode(true);
+process.stdin.on('data', cleanup);
+process.stdout.on('resize', resize);
+
+resize();
+setInterval(frame, 66);

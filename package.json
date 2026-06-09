@@ -1,0 +1,13 @@
+{
+  "name": "haze",
+  "version": "1.0.0",
+  "description": "Terminal particle system — watch stars drift while you procrastinate",
+  "bin": {
+    "haze": "./bin/haze"
+  },
+  "keywords": ["terminal", "screensaver", "particles", "cli", "eye-candy"],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  }
+}
