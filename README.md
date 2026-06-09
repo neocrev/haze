@@ -1,8 +1,9 @@
-# haze
-
-[![npm](https://img.shields.io/npm/v/haze)](https://www.npmjs.com/package/haze) [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-
-Terminal particle system. Stars drift. Colours shift. You watch.
+<p align="center">
+  <h1>haze</h1>
+  <p>Terminal particle system. Stars drift. Colours shift. You watch.</p>
+  <a href="https://www.npmjs.com/package/haze"><img src="https://img.shields.io/npm/v/haze" alt="npm"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+</p>
 
 <p align="center">
   <img src="demo.svg" alt="haze demo" width="640">
